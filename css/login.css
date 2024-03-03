@@ -1,0 +1,90 @@
+html {
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+body {
+    background: url(../img/background1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+main {
+    position: relative;
+    width: 30vw;
+    margin: auto;
+    margin-top: 30vh;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    border: 2px solid black;
+}
+h1 {
+    text-align: center;
+    font-size: 2vw;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p input {
+    position: relative;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-left: 5px;
+    padding: 5px;
+
+
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+p input:focus {
+    bottom: 5px;
+}
+input[type="submit"] {
+    border: solid 2px black;
+    border-radius: 20px;
+    width: 40%;
+    background-color: white;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: 0.4s;
+
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+input[type="submit"]:hover {
+    scale: 1.2;
+}
+
+#back {
+    position: relative;
+    bottom: 7.5vh;
+    left: 1vw;
+}
+#back input {
+    border: solid 2px black;
+    border-radius: 20px;
+    width: 6vw;
+    background-color: white;
+    cursor: pointer;
+    transition: 0.4s;
+
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+#back input:hover {
+    scale: 1.2;
+}
