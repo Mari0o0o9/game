@@ -8,7 +8,6 @@ body {
     background: url(../img/background1.jpg);
     background-size: cover;
     background-attachment: fixed;
-
 }
 main {
     position: relative;
@@ -107,6 +106,32 @@ input[type="submit"]:hover {
 }
 #back input:hover {
     scale: 1.2;
+}
+
+#reset {
+    position: relative;
+    bottom: 7.5vh;
+    left: 16.5vw;
+}
+#reset input {
+    border: solid 2px black;
+    border-radius: 20px;
+    width: 6vw;
+    background-color: white;
+    cursor: pointer;
+    transition: 0.4s;
+
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+#reset input:hover {
+    scale: 1.2;
+}
+
+a {
+    text-decoration: none;
 }
 
 

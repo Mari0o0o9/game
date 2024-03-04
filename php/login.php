@@ -18,6 +18,9 @@
         <a href="../php/register.php" id="back">
             <input type="button" value="Rejestracja">
         </a>
+        <a href="../php/reset_password.php" id="reset">
+            <input type="button" value="Zmiana hasła">
+        </a>
         <form method="post">
             <p>
                 <label for="login" class="material-symbols-outlined">person</label>
