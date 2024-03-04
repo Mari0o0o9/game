@@ -133,6 +133,10 @@ input[type="submit"]:hover {
 a {
     text-decoration: none;
 }
+#value {
+    text-align: center;
+    font-weight: bold;
+}
 
 
 

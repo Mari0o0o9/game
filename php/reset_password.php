@@ -36,6 +36,7 @@
             <p>
                 <input type="submit" value="Zmień Hasło">
             </p>
+            <p id="value"></p>
         </form>
     </main>
 <script src="../js/password.js"></script>

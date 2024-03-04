@@ -40,6 +40,7 @@
             <p>
                 <input type="submit" value="Zarejestruj się">
             </p>
+            <p id="value"></p>
         </form>
     </main>
 <script src="../js/password.js"></script>

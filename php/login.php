@@ -34,6 +34,7 @@
             <p>
                 <input type="submit" value="Zaloguj się">
             </p>
+            <p id="value"></p>
         </form>
     </main>
 <script src="../js/password.js"></script>
