@@ -88,3 +88,7 @@ input[type="submit"]:hover {
 #back input:hover {
     scale: 1.2;
 }
+
+.material-symbols-outlined {
+    user-select: none;
+}
