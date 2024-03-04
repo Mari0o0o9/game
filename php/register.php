@@ -1,3 +1,15 @@
+<?php
+    session_start();
+    $conn = new mysqli("localhost", "root", "", "game");
+    if ($conn -> connect_error) {
+        die("Connection failed: " . $conn -> connect_error);
+    }
+
+    function register() {
+        global $conn;
+        
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
