@@ -28,17 +28,20 @@
                 <input type="text" name="email" id="email" placeholder="Podaj Email...">
             </p>
             <p>
-                <label for="password1" class="material-symbols-outlined">password</label>
-                <input type="password" name="password1" id="password1" placeholder="Podaj Hasło...">
+                <label for="password1" class="material-symbols-outlined labelPass">password</label>
+                <input type="password" name="password1" id="password1" class="pass" placeholder="Podaj Hasło...">
+                <span class="material-symbols-outlined visPass">visibility</span>
             </p>
             <p>
-                <label for="password2" class="material-symbols-outlined">password</label>
-                <input type="password" name="password2" id="password2" placeholder="Powtórz Hasło...">
+                <label for="password2" class="material-symbols-outlined labelPass">password</label>
+                <input type="password" name="password2" id="password2" class="pass" placeholder="Powtórz Hasło...">
+                <span class="material-symbols-outlined visPass">visibility</span>
             </p>
             <p>
                 <input type="submit" value="Zarejestruj się">
             </p>
         </form>
     </main>
+<script src="../js/password.js"></script>
 </body>
 </html>

@@ -14,7 +14,7 @@ main {
     position: relative;
     width: 30vw;
     margin: auto;
-    margin-top: 30vh;
+    margin-top: 27vh;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 20px;
     border: 2px solid black;
@@ -46,7 +46,24 @@ p input {
     font-weight: 400;
     font-style: normal;
 }
-p input:focus {
+.visPass {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    right: 20px;
+    top: 1px;
+}
+.pass {
+    position: relative;
+    left: 11px;
+}
+.labelPass {
+    position: relative;
+    left: 11px;
+}
+p input:focus + .visPass{
     bottom: 5px;
 }
 input[type="submit"] {

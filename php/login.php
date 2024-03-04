@@ -24,13 +24,15 @@
                 <input type="text" name="login" id="login" placeholder="Podaj Login...">
             </p>
             <p>
-                <label for="password" class="material-symbols-outlined">password</label>
-                <input type="password" name="password" id="password" placeholder="Podaj Hasło...">
+                <label for="password" class="material-symbols-outlined labelPass">password</label>
+                <input type="password" name="password" id="password" class="pass" placeholder="Podaj Hasło...">
+                <span class="material-symbols-outlined visPass">visibility</span>
             </p>
             <p>
                 <input type="submit" value="Zaloguj się">
             </p>
         </form>
     </main>
+<script src="../js/password.js"></script>
 </body>
 </html>
