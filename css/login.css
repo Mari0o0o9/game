@@ -63,9 +63,11 @@ p input {
     position: relative;
     left: 11px;
 }
-p input:focus + .visPass{
+p input:focus + .visPass {
     bottom: 5px;
 }
+
+
 input[type="submit"] {
     border: solid 2px black;
     border-radius: 20px;
@@ -82,6 +84,7 @@ input[type="submit"] {
 }
 input[type="submit"]:hover {
     scale: 1.2;
+    font-weight: bold;
 }
 
 #back {

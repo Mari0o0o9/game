@@ -26,7 +26,7 @@
             <p>
                 <label for="password" class="material-symbols-outlined labelPass">password</label>
                 <input type="password" name="password" id="password" class="pass" placeholder="Podaj Hasło...">
-                <span class="material-symbols-outlined visPass">visibility</span>
+                <span class="material-symbols-outlined visPass">visibility_off</span>
             </p>
             <p>
                 <input type="submit" value="Zaloguj się">

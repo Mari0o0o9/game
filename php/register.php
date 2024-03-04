@@ -30,12 +30,12 @@
             <p>
                 <label for="password1" class="material-symbols-outlined labelPass">password</label>
                 <input type="password" name="password1" id="password1" class="pass" placeholder="Podaj Hasło...">
-                <span class="material-symbols-outlined visPass">visibility</span>
+                <span class="material-symbols-outlined visPass">visibility_off</span>
             </p>
             <p>
                 <label for="password2" class="material-symbols-outlined labelPass">password</label>
                 <input type="password" name="password2" id="password2" class="pass" placeholder="Powtórz Hasło...">
-                <span class="material-symbols-outlined visPass">visibility</span>
+                <span class="material-symbols-outlined visPass">visibility_off</span>
             </p>
             <p>
                 <input type="submit" value="Zarejestruj się">
