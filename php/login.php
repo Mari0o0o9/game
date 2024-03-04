@@ -28,7 +28,7 @@
                 <input type="password" name="password" id="password" placeholder="Podaj Hasło...">
             </p>
             <p>
-                <input type="submit" value="Login">
+                <input type="submit" value="Zaloguj się">
             </p>
         </form>
     </main>

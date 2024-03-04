@@ -89,6 +89,11 @@ input[type="submit"]:hover {
     scale: 1.2;
 }
 
+
+
+::placeholder {
+    color: black;
+}
 .material-symbols-outlined {
     user-select: none;
 }
