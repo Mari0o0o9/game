@@ -67,16 +67,16 @@
         <form method="post">
             <p>
                 <label for="email" class="material-symbols-outlined">person</label>
-                <input type="text" name="email" id="email" placeholder="Podaj Email...">
+                <input type="text" name="email" id="email" placeholder="Podaj Email..." required>
             </p>
             <p>
                 <label for="password1" class="material-symbols-outlined labelPass">password</label>
-                <input type="password" name="password1" id="password1" class="pass" placeholder="Podaj Hasło...">
+                <input type="password" name="password1" id="password1" class="pass" placeholder="Podaj Hasło..." required>
                 <span class="material-symbols-outlined visPass">visibility_off</span>
             </p>
             <p>
                 <label for="password2" class="material-symbols-outlined labelPass">password</label>
-                <input type="password" name="password2" id="password2" class="pass" placeholder="Powtórz Hasło...">
+                <input type="password" name="password2" id="password2" class="pass" placeholder="Powtórz Hasło..." required>
                 <span class="material-symbols-outlined visPass">visibility_off</span>
             </p>
             <p>
