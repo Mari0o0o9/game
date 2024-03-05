@@ -28,7 +28,18 @@
                 return "Hasła nie są takie same.";
                 exit();
             } else {
-                
+                $pass_hash = password_hash($password1, PASSWORD_DEFAULT);
+
+                $sql_update = "UPDATE user 
+                                SET password = '$pass_hash' 
+                                WHERE email = '$email'";
+                if ($conn -> query($sql_update)) {
+                    return "Zmieniono Hasło pomyślnie." . header("refresh:1.5; url=login.php");
+                    exit();
+                } else {
+                    return "Wystąpił błąd podczas zmiany hasła.";
+                    exit();
+                }
             }
         }
     }
@@ -71,7 +82,7 @@
             <p>
                 <input type="submit" value="Zmień Hasło">
             </p>
-            <p id="value"></p>
+            <p id="value"><?=reset();?></p>
         </form>
     </main>
 <script src="../js/password.js"></script>
