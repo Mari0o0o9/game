@@ -1,3 +1,36 @@
+<?php
+    session_start();
+    $conn = new mysqli("localhost", "root", "", "game");
+    if ($conn -> connect_error) {
+        die("Connection failed: " . $conn -> connect_error);
+    }
+
+    function login() {
+        global $conn;
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $login = $_POST['login'];
+            $pass = $_POST['password'];
+
+            $sql_login = "SELECT *
+                        FROM user
+                        WHERE login = '$login'";
+            $result_login = $conn -> query($sql_login);
+
+            if (($row = $result_login -> fetch_assoc()) && password_verify($pass, $row['password'])) {
+                $_SESSION["logged"] = true;
+                $_SESSION["login"] = $login;
+                $_SESSION["id"] = $row['id'];
+
+                return htmlspecialchars("Zalogowano pomyślnie." . header("refresh:1.5; url=game.php"));
+                exit();
+            } else {
+                return "Nieprawidłowy login lub hasło.";
+                exit();
+            }
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,17 +57,17 @@
         <form method="post">
             <p>
                 <label for="login" class="material-symbols-outlined">person</label>
-                <input type="text" name="login" id="login" placeholder="Podaj Login...">
+                <input type="text" name="login" id="login" placeholder="Podaj Login..." required>
             </p>
             <p>
                 <label for="password" class="material-symbols-outlined labelPass">password</label>
-                <input type="password" name="password" id="password" class="pass" placeholder="Podaj Hasło...">
+                <input type="password" name="password" id="password" class="pass" placeholder="Podaj Hasło..." required>
                 <span class="material-symbols-outlined visPass">visibility_off</span>
             </p>
             <p>
                 <input type="submit" value="Zaloguj się">
             </p>
-            <p id="value"></p>
+            <p id="value"><?=login();?></p>
         </form>
     </main>
 <script src="../js/password.js"></script>
