@@ -5,7 +5,7 @@
         die("Connection failed: " . $conn -> connect_error);
     }
 
-    function reset() {
+    function reset_pass() {
         global $conn;
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -82,7 +82,7 @@
             <p>
                 <input type="submit" value="Zmień Hasło">
             </p>
-            <p id="value"><?=reset();?></p>
+            <p id="value"><?=reset_pass();?></p>
         </form>
     </main>
 <script src="../js/password.js"></script>
