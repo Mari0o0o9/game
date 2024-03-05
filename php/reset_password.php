@@ -12,6 +12,24 @@
             $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
             $password1 = $_POST['password1'];
             $password2 = $_POST['password2'];
+
+            $sql_email  = "SELECT * 
+                            FROM user 
+                            WHERE email='$email'";
+            $result_email = $conn -> query($sql_email);
+
+            if (!$email) {
+                return "Niepoprawny adres e-mail.";
+                exit();
+            } elseif ($result_email -> num_rows == 0) {
+                return "Nie ma takiego e-mailu.";
+                exit();
+            } elseif ($password1 !== $password2) {
+                return "Hasła nie są takie same.";
+                exit();
+            } else {
+                
+            }
         }
     }
 ?>
