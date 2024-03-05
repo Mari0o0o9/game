@@ -1,3 +1,20 @@
+<?php
+    session_start();
+    $conn = new mysqli("localhost", "root", "", "game");
+    if ($conn -> connect_error) {
+        die("Connection failed: " . $conn -> connect_error);
+    }
+
+    function reset() {
+        global $conn;
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
+            $password1 = $_POST['password1'];
+            $password2 = $_POST['password2'];
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
