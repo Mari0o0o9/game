@@ -1,0 +1,130 @@
+html {
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+body {
+    background: url(../img/backgorund/background3.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+}
+#info {
+    display: flex;
+    align-items: center;
+    width: 25vw;
+    margin: auto;
+    height: 80vh;
+}
+.classInfo {
+    display: none;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 10px;
+    backdrop-filter: blur(10px);
+}
+main {
+    width: 30vw;
+    margin: auto;
+}
+h1 {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    border: solid 2px black;
+    backdrop-filter: blur(10px);
+}
+a {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    border: solid 2px black;
+    color: black;
+    display: flex;
+    align-items: center; /* Centrowanie zawartości w pionie */
+    text-decoration: none;
+    height: 10vh;
+    width: 100%;
+    margin: 1vh 0;
+    transition: 0.4s;
+}
+
+.image-container {
+    position: relative;
+    margin-left: auto;
+    margin-right: 2%; 
+    overflow: hidden;
+    border-radius: inherit;
+    width: 80px; 
+    height: 80px; 
+    transition: 0.4s;
+    animation: imgPositionOff 0.4s ease forwards;
+}
+
+a:hover .image-container {
+    transform: scale(1.1);
+    border-radius: 20%;
+    animation: imgPosition 0.4s ease forwards;
+}
+strong {
+    transition: 0.4s ease;
+}
+a:hover strong {
+    scale: 1.7;
+    margin-left: 10%;
+}
+a:hover {
+    margin: 2vh 0;
+    backdrop-filter: blur(10px);
+}
+
+.image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: inherit;
+}
+
+strong {
+    margin-left: 10px;
+}
+
+
+
+@keyframes imgPosition {
+    0% {
+        width: 80px; 
+        height: 80px;
+        bottom: 0px;
+        left: 0px;
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 1);
+    }
+    100% {
+        width: 90px;
+        height: 90px;
+        bottom: 15px;
+        left: 30px;
+        box-shadow: 0px 0px 7px 4px rgba(0, 0, 0, 1);
+    }
+}
+@keyframes imgPositionOff {
+    0% {
+        width: 90px; 
+        height: 90px;
+        bottom: 15px;
+        left: 30px;
+        box-shadow: 0px 0px 7px 4px rgba(0, 0, 0, 1);
+    }
+    100% {
+        width: 80px;
+        height: 80px;
+        bottom: 0px;
+        left: 0px;
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 1);
+    }
+}
