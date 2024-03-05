@@ -73,3 +73,4 @@
 <script src="../js/password.js"></script>
 </body>
 </html>
+<?php $conn -> close();?>
