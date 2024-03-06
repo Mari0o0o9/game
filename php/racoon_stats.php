@@ -9,11 +9,12 @@
         die("Connection failed: " . $conn -> connect_error);
     }
 
-    if (!isset($_GET['class']) || $_GET['class'] !== "Archer" || $_GET['class'] !== "Barbarian" || $_GET['class'] !== "Archer" || $_GET['class'] !== "Archer" || $_GET['class'] !== "Archer") {
+    if (!isset($_GET['class']) || ($_GET['class'] !== "Archer" && $_GET['class'] !== "Barbarian" && $_GET['class'] !== "Knight" && $_GET['class'] !== "Paladin" && $_GET['class'] !== "Thief" && $_GET['class'] !== "Wizard")) {
         header("Location: login.php");
     }
-
+    
     $racoonClass = $_SESSION['class'] = $_GET['class'];
+
     function racoon() {
         global $conn;
 
@@ -40,8 +41,64 @@
     </div>
     <main>
         <form method="post">
-
+            <div>
+                <label for="name" class="material-symbols-outlined">signature</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div>
+                <label for="health" class="material-symbols-outlined">favorite</label>
+                <div>
+                    <div class="material-symbols-outlined minus">remove</div>
+                    <input type="number" name="health" id="health" class="inputPoints" readonly value="0">
+                    <div class="material-symbols-outlined plus">add</div>
+                </div>
+            </div>
+            <div>
+                <label for="intelligence" class="material-symbols-outlined">neurology</label>
+                <div>
+                    <div class="material-symbols-outlined minus">remove</div>
+                    <input type="number" name="intelligence" id="intelligence" class="inputPoints" readonly value="0">
+                    <div class="material-symbols-outlined plus">add</div>
+                </div>
+            </div>
+            <div>
+                <label for="" class="material-symbols-outlined"></label>
+                <div>
+                    <div class="material-symbols-outlined minus">remove</div>
+                    <input type="number" name="in" id="" class="inputPoints" readonly value="0">
+                    <div class="material-symbols-outlined plus">add</div>
+                </div>
+            </div>
+            <div>
+                <label for="" class="material-symbols-outlined"></label>
+                <div>
+                    <div class="material-symbols-outlined minus">remove</div>
+                    <input type="number" name="" id="" class="inputPoints" readonly value="0">
+                    <div class="material-symbols-outlined plus">add</div>
+                </div>
+            </div>
+            <div>
+                <label for="" class="material-symbols-outlined"></label>
+                <div>
+                    <div class="material-symbols-outlined minus">remove</div>
+                    <input type="number" name="" id="" class="inputPoints" readonly value="0">
+                    <div class="material-symbols-outlined plus">add</div>
+                </div>
+            </div>
+            <div>
+                <label for="" class="material-symbols-outlined"></label>
+                <div>
+                    <div class="material-symbols-outlined minus">remove</div>
+                    <input type="number" name="" id="" class="inputPoints" readonly value="0">
+                    <div class="material-symbols-outlined plus">add</div>
+                </div>
+            </div>
+            <p>
+                <input type="number" id="pointsValue" value="10" readonly>
+            </p>
+            <div id="value"></div>
         </form>
     </main>
+<script src="../js/racoonStats.js"></script>
 </body>
 </html>
