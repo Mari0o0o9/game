@@ -28,6 +28,10 @@ body {
     margin: 10px;
     padding: 10px;
     backdrop-filter: blur(10px);
+    animation: infoOff 0.4s ease forwards;
+}
+a:hover .classInfo {
+    animation: infoOn 0.4s ease forwards;
 }
 main {
     width: 30vw;
@@ -46,7 +50,7 @@ a {
     border: solid 2px black;
     color: black;
     display: flex;
-    align-items: center; /* Centrowanie zawartości w pionie */
+    align-items: center; 
     text-decoration: none;
     height: 10vh;
     width: 100%;
@@ -126,5 +130,16 @@ strong {
         bottom: 0px;
         left: 0px;
         box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 1);
+    }
+}
+
+@keyframes infoOn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

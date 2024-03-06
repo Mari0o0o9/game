@@ -22,7 +22,7 @@
                 $_SESSION["login"] = $login;
                 $_SESSION["id"] = $row['id'];
 
-                return htmlspecialchars("Zalogowano pomyślnie." . header("refresh:1.5; url=game.php"));
+                return htmlspecialchars("Zalogowano pomyślnie." . header("refresh:1.5; url=racoon.php"));
                 exit();
             } else {
                 return "Nieprawidłowy login lub hasło.";
