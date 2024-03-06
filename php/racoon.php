@@ -22,37 +22,37 @@
     <main>
         <h1>Wybierz Postać</h1>
         <div>
-            <a href="" class="classRacoon">
+            <a href="../php/racoon_stats.php?class=Archer" class="classRacoon">
                 <strong>Archer</strong>
                 <div class="image-container">
                     <img src="../img/racoon/Archer.jpeg" alt="Archer">
                 </div>
             </a>
-            <a href="" class="classRacoon">
+            <a href="../php/racoon_stats.php?class=Barbarian" class="classRacoon">
                 <strong>Barbarian</strong>
                 <div class="image-container">
                     <img src="../img/racoon/Barbarian.jpeg" alt="Barbarian">
                 </div>
             </a>
-            <a href="" class="classRacoon">
+            <a href="../php/racoon_stats.php?class=Knight" class="classRacoon">
                 <strong>Knight</strong>
                 <div class="image-container">
                     <img src="../img/racoon/Knight.jpeg" alt="Knight">
                 </div>
             </a>
-            <a href="" class="classRacoon">
+            <a href="../php/racoon_stats.php?class=Paladin" class="classRacoon">
                 <strong>Paladin</strong>
                 <div class="image-container">
                     <img src="../img/racoon/Paladin.jpeg" alt="Paladin">
                 </div>
             </a>
-            <a href="" class="classRacoon">
+            <a href="../php/racoon_stats.php?class=Thief" class="classRacoon">
                 <strong>Thief</strong>
                 <div class="image-container">
                     <img src="../img/racoon/Thief.jpeg" alt="Thief">
                 </div>
             </a>
-            <a href="" class="classRacoon">
+            <a href="../php/racoon_stats.php?class=Wizard" class="classRacoon">
                 <strong>Wizard</strong>
                 <div class="image-container">
                     <img src="../img/racoon/Wizard.jpeg" alt="Wizard">
