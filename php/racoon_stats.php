@@ -41,60 +41,77 @@
     </div>
     <main>
         <form method="post">
-            <div>
-                <label for="name" class="material-symbols-outlined">signature</label>
-                <input type="text" name="name" id="name">
+            <div class="container">
+                <input type="text" name="name" id="name" placeholder="Imie szopa...">
             </div>
-            <div>
-                <label for="health" class="material-symbols-outlined">favorite</label>
-                <div>
+            <div class="container">
+                <div class="container_name">
+                    <label for="health" class="material-symbols-outlined">favorite</label>
+                    <div>Health</div>
+                </div>
+                <div class="container_points">
                     <div class="material-symbols-outlined minus">remove</div>
                     <input type="number" name="health" id="health" class="inputPoints" readonly value="0">
                     <div class="material-symbols-outlined plus">add</div>
                 </div>
             </div>
-            <div>
-                <label for="intelligence" class="material-symbols-outlined">neurology</label>
-                <div>
+            <div class="container">
+                <div class="container_name">
+                    <label for="intelligence" class="material-symbols-outlined">neurology</label>
+                    <div>Intelligence</div>
+                </div>
+                <div class="container_points">
                     <div class="material-symbols-outlined minus">remove</div>
                     <input type="number" name="intelligence" id="intelligence" class="inputPoints" readonly value="0">
                     <div class="material-symbols-outlined plus">add</div>
                 </div>
             </div>
-            <div>
-                <label for="" class="material-symbols-outlined"></label>
-                <div>
+            <div class="container">
+                <div class="container_name">
+                    <label for="strength" class="material-symbols-outlined">swords</label>
+                    <div>Strength</div>
+                </div>
+                <div class="container_points">
                     <div class="material-symbols-outlined minus">remove</div>
-                    <input type="number" name="in" id="" class="inputPoints" readonly value="0">
+                    <input type="number" name="strength" id="strength" class="inputPoints" readonly value="0">
                     <div class="material-symbols-outlined plus">add</div>
                 </div>
             </div>
-            <div>
-                <label for="" class="material-symbols-outlined"></label>
-                <div>
+            <div class="container">
+                <div class="container_name">
+                    <label for="agility" class="material-symbols-outlined">sprint</label>
+                    <div>Agility</div>
+                </div>
+                <div class="container_points">
                     <div class="material-symbols-outlined minus">remove</div>
-                    <input type="number" name="" id="" class="inputPoints" readonly value="0">
+                    <input type="number" name="agility" id="agility" class="inputPoints" readonly value="0">
                     <div class="material-symbols-outlined plus">add</div>
                 </div>
             </div>
-            <div>
-                <label for="" class="material-symbols-outlined"></label>
-                <div>
+            <div class="container">
+                <div class="container_name">
+                    <label for="mana" class="material-symbols-outlined">water_drop</label>
+                    <div>Mana</div>
+                </div>
+                <div class="container_points">
                     <div class="material-symbols-outlined minus">remove</div>
-                    <input type="number" name="" id="" class="inputPoints" readonly value="0">
+                    <input type="number" name="mana" id="mana" class="inputPoints" readonly value="0">
                     <div class="material-symbols-outlined plus">add</div>
                 </div>
             </div>
-            <div>
-                <label for="" class="material-symbols-outlined"></label>
-                <div>
+            <div class="container">
+                <div class="container_name">
+                    <label for="defense" class="material-symbols-outlined">shield</label>
+                    <div>Defense</div>
+                </div>
+                <div class="container_points">
                     <div class="material-symbols-outlined minus">remove</div>
-                    <input type="number" name="" id="" class="inputPoints" readonly value="0">
+                    <input type="number" name="defense" id="defense" class="inputPoints" readonly value="0">
                     <div class="material-symbols-outlined plus">add</div>
                 </div>
             </div>
             <p>
-                <input type="number" id="pointsValue" value="10" readonly>
+                <input type="number" id="pointsValue" class="inputPoints" value="10" readonly>
             </p>
             <div id="value"></div>
         </form>
