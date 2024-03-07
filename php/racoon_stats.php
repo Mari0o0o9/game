@@ -1,7 +1,9 @@
 <?php
+    ob_start();
     session_start();
     if (!isset($_SESSION["logged"]) || !isset($_SESSION["login"]) || !isset($_SESSION["id"])) {
         header("Location: login.php");
+        exit();
     }
 
     $conn = new mysqli("localhost", "root", "", "game");
@@ -9,15 +11,51 @@
         die("Connection failed: " . $conn -> connect_error);
     }
 
-    if (!isset($_GET['class']) || ($_GET['class'] !== "Archer" && $_GET['class'] !== "Barbarian" && $_GET['class'] !== "Knight" && $_GET['class'] !== "Paladin" && $_GET['class'] !== "Thief" && $_GET['class'] !== "Wizard")) {
+    if (!isset($_GET['class']) || !in_array($_GET['class'], ["Archer", "Barbarian", "Knight", "Paladin", "Thief", "Wizard"])) {
         header("Location: login.php");
+        exit();
     }
     
-    $racoonClass = $_SESSION['class'] = $_GET['class'];
+    $racoonClass = $_GET['class'];
+    $_SESSION['class'] = $racoonClass;
 
     function racoon() {
         global $conn;
+        global $racoonClass;
 
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $name = $_POST['name'];
+            $health = $_POST['health'];
+            $intelligance = $_POST['intelligence'];
+            $strength = $_POST['strength'];
+            $agility = $_POST['agility'];
+            $mana = $_POST['mana'];
+            $defense = $_POST['defense'];
+
+            $user_id = $_SESSION["id"];
+
+            $sql_insert_racoon = "INSERT INTO racoon (user_id, racoon, racoon_name) 
+                                    VALUES ('$user_id', '$racoonClass', '$name')";
+            
+            if ($conn -> query(($sql_insert_racoon))) {
+                $racoon_id = $conn -> insert_id;
+
+                $sql_insert_stats = "INSERT INTO racoon_stats (racoon_id, health, intelligence, strength, agility, mana, defense)
+                                        VALUES ('$racoon_id', '$health', '$intelligance', '$strength', '$agility', '$mana', '$defense')";
+                
+                if ($conn -> query($sql_insert_stats)) {
+                    echo "Stworzyłeś Szopa.";
+                    header("Location: game.php");
+                    exit();
+                } else {
+                    return "Error: " . $sql_insert_stats . "<br>" . $conn -> error;
+                    exit();
+                }
+            } else {
+                return "Błąd podczas tworzenia szopa. Spróbuj ponownie.";
+                exit();
+            }
+        }
     }
 ?>
 <!DOCTYPE html>
@@ -42,7 +80,7 @@
     <main>
         <form method="post">
             <div class="container">
-                <input type="text" name="name" id="name" placeholder="Imie szopa...">
+                <input type="text" name="name" id="name" placeholder="Imie szopa..." required>
             </div>
             <div class="container">
                 <div class="container_name">
@@ -114,8 +152,19 @@
                 <input type="number" id="pointsValue" class="inputPoints" value="10" readonly>
             </p>
             <div id="value"></div>
+            <p>
+                <input type="submit" value="Stwórz Szopa" id="submitButton">
+            </p>
+            <div id="function"><?=racoon();?></div>
         </form>
     </main>
+    <a href="./racoon.php" id="back">
+        <input type="button" value="Wróć">
+    </a>
 <script src="../js/racoonStats.js"></script>
 </body>
 </html>
+<?php
+$conn -> close();
+ob_end_flush();
+?>

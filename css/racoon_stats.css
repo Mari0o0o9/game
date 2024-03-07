@@ -53,6 +53,7 @@ form {
     left: 5px;
     text-align: center;
     border: none;
+    font-size: 1.1rem;
     outline: none;
     user-select: none;
     background: transparent;
@@ -104,15 +105,21 @@ p {
 }
 #pointsValue {
     font-weight: bold;
+    font-size: 1.4rem;
 }
 #value {
-    font-weight: bold;
+    font-weight: bold; 
+}
+#function {
+    text-align: center;
+    font-weight: bold; 
 }
 #name {
     position: relative;
     left: 5px;
     border: 2px solid black;
     border-radius: 20px;
+    outline: none;
     padding: 3px;
     font-size: 1.2rem;
     text-align: center;
@@ -126,11 +133,55 @@ label {
     margin-right: 5%;
 }
 
+#submitButton {
+    cursor: pointer;
+    border: 2px solid black;
+    padding: 3px 0;
+    width: 17vw;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    transition: 0.4s;
+
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+#submitButton:hover {
+    scale: 1.2;
+    color: white;
+    background-color: black;
+}
+#back {
+    text-decoration: none;
+    width: 30vw;
+    margin: auto;
+    margin-top: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#back input {
+    cursor: pointer;
+    border: 2px solid black;
+    padding: 3px 0;
+    width: 60%;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    transition: 0.4s;
+
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+#back input:hover {
+    scale: 1.2;
+}
+
 ::placeholder {
     color: black;
 }
-
-
 .material-symbols-outlined {
     user-select: none;
 }
