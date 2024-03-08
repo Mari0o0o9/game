@@ -40,8 +40,8 @@
             if ($conn -> query(($sql_insert_racoon))) {
                 $racoon_id = $conn -> insert_id;
 
-                $sql_insert_stats = "INSERT INTO racoon_stats (racoon_id, health, intelligence, strength, agility, mana, defense)
-                                        VALUES ('$racoon_id', '$health', '$intelligance', '$strength', '$agility', '$mana', '$defense')";
+                $sql_insert_stats = "INSERT INTO racoon_stats (racoon_id, level, health, intelligence, strength, agility, mana, defense)
+                                        VALUES ('$racoon_id', '0', '$health', '$intelligance', '$strength', '$agility', '$mana', '$defense')";
                 
                 if ($conn -> query($sql_insert_stats)) {
                     echo "Stworzyłeś Szopa.";
