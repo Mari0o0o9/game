@@ -1,0 +1,135 @@
+html {
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+body {
+    background: url(../img/backgorund/background2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: space-around;
+}
+#name_user {
+    width: 30vw;
+    height: 11vh;
+    font-size: 1.5vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    border: solid 2px black;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+#name_user div {
+    font-weight: bold;
+}
+main {
+    width: 30vw;
+    margin: auto;
+    margin-top: 2vh;
+}
+a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.racoon {
+    position: relative;
+    border-radius: 20px;
+    border: solid 2px black;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: 0.4s ease;
+    animation: racoonOff 0.4s ease forwards;
+}
+.racoon h2 {
+    font-size: 3vh;
+}
+.racoon h4 {
+    font-size: 2vh;
+}
+.container_img img {
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+}
+.container_img {
+    position: relative;
+
+    border-radius: 20%;
+    margin-right: 10px;
+    animation: imgPositionOff 0.4s ease forwards;
+}
+.container_name {
+    margin-left: 10px;
+    transition: 0.4s ease;
+}
+.racoon:hover {
+    backdrop-filter: blur(10px);
+    animation: racoonOn 0.4s ease forwards;
+
+}
+a:hover .container_name {
+    margin-left: 10%;
+    font-size: scal(1.1);
+}
+a:hover .container_img {
+    animation: imgPositionOn 0.4s ease forwards;
+}
+
+
+
+@keyframes imgPositionOn {
+    0% {
+        width: 6vw;
+        height: 12vh;
+        bottom: 0px;
+        left: 0px;
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 1);
+    }
+    100% {
+        width: 7vw;
+        height: 13vh;
+        bottom: 20px;
+        left: 45px;
+        box-shadow: 0px 0px 7px 4px rgba(0, 0, 0, 1);
+    }
+}
+@keyframes imgPositionOff {
+    0% {
+        width: 7vw;
+        height: 13vh;
+        bottom: 20px;
+        left: 45px;
+        box-shadow: 0px 0px 7px 4px rgba(0, 0, 0, 1);
+    }
+    100% {
+        width: 6vw;
+        height: 12vh;
+        bottom: 0px;
+        left: 0px;
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 1);
+    }
+}
+
+@keyframes racoonOn {
+    0% {
+       left: 0;
+    }
+    100% {
+       left: 10%;
+    }
+}
+@keyframes racoonOff {
+    0% {
+        left: 10%;
+     }
+     100% {
+        left: 0;
+     }
+}

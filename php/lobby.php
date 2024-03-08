@@ -22,13 +22,17 @@
 
         if ($result = $conn -> query($query)) {
             while ($row = $result -> fetch_array()) {
-                return "<a href='./game.php' class='racoon'>
-                            <div>
-                                <h4>Class: $row[racoon]</h4>
-                                <h1>Name: $row[racoon_name]</h1>
-                            </div>
-                            <img src='../img/racoon/$row[racoon].jpeg' alt='$row[racoon]'>
-                    </a>";
+                return "<div class='racoon'>
+                            <a href='./game.php'>
+                                <div class='container_name'>
+                                    <h4>Class: {$row['racoon']}</h4>
+                                    <h2>Name: {$row['racoon_name']}</h2>
+                                </div>
+                                <div class='container_img'>
+                                    <img src='../img/racoon/{$row['racoon']}.jpeg' alt='{$row['racoon']}'>
+                                </div>
+                            </a>
+                        </div>";
             }
         } else {
             return "Error: " . $query . "<br>" . $conn -> error;
@@ -77,8 +81,9 @@
 </head>
 <body>
     <div>
-        <div>
-            <h1>Witaj <?=$_SESSION["login"]?></h1>
+        <div id="name_user">
+            <h1>Witaj <?=$_SESSION["login"]?>!!!</h1>
+            <div>Wybierz swoją postać</div>
         </div>
         <main>
             <?=racoon();?>
