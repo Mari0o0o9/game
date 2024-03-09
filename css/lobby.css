@@ -29,8 +29,10 @@ body {
 }
 main {
     width: 30vw;
+    height: 80vh;
     margin: auto;
     margin-top: 2vh;
+    overflow: auto;
 }
 a {
     text-decoration: none;
@@ -40,6 +42,8 @@ a {
     align-items: center;
 }
 .racoon {
+    margin: 5% 0;
+    width: 85%;
     position: relative;
     border-radius: 20px;
     border: solid 2px black;
@@ -81,6 +85,24 @@ a:hover .container_name {
 a:hover .container_img {
     animation: imgPositionOn 0.4s ease forwards;
 }
+#info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 80vh;
+}
+.racoon_stats {
+    width: 60%;
+    display: none;
+    text-align: center;
+    border-radius: 20px;
+    border: solid 2px black;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.racoon_stats h2 {
+    text-decoration: underline;
+}
 
 
 
@@ -95,8 +117,8 @@ a:hover .container_img {
     100% {
         width: 7vw;
         height: 13vh;
-        bottom: 20px;
-        left: 45px;
+        bottom: 2vh;
+        left: 1.5vw;
         box-shadow: 0px 0px 7px 4px rgba(0, 0, 0, 1);
     }
 }
@@ -104,8 +126,8 @@ a:hover .container_img {
     0% {
         width: 7vw;
         height: 13vh;
-        bottom: 20px;
-        left: 45px;
+        bottom: 2vh;
+        left: 1.5vw;
         box-shadow: 0px 0px 7px 4px rgba(0, 0, 0, 1);
     }
     100% {
@@ -116,6 +138,7 @@ a:hover .container_img {
         box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 1);
     }
 }
+
 
 @keyframes racoonOn {
     0% {
@@ -133,6 +156,7 @@ a:hover .container_img {
         left: 0;
      }
 }
+
 
 @keyframes infoOn {
     0% {

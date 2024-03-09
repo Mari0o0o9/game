@@ -92,6 +92,7 @@
     <div id="info">
         <?=getLevelUpPoints();?>
     </div>
+<script src="../js/lobbyInfo.js"></script>
 </body>
 </html>
 <?php
