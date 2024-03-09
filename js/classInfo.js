@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var raccon = document.querySelectorAll(".classRacoon");
-    var info = document.querySelectorAll(".classInfo");
+    var raccon = document.querySelectorAll(".classRacoon, .racoon");
+    var info = document.querySelectorAll(".classInfo, .racoon_stats");
 
     raccon.forEach(function (element, index) {
         element.addEventListener("mouseenter", function () {

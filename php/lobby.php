@@ -92,7 +92,7 @@
     <div id="info">
         <?=getLevelUpPoints();?>
     </div>
-<script src="../js/lobbyInfo.js"></script>
+<script src="../js/classInfo.js"></script>
 </body>
 </html>
 <?php
