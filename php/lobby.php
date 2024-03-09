@@ -92,6 +92,9 @@
     <div id="info">
         <?=getLevelUpPoints();?>
     </div>
+    <div id="logout">
+        
+    </div>
 <script src="../js/classInfo.js"></script>
 </body>
 </html>
