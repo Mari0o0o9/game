@@ -88,12 +88,12 @@
         <main>
             <?=racoon();?>
         </main>
+        <div id="logout">
+            <a href="logout.php">Logout</a>
+        </div>
     </div>
     <div id="info">
         <?=getLevelUpPoints();?>
-    </div>
-    <div id="logout">
-        
     </div>
 <script src="../js/classInfo.js"></script>
 </body>
