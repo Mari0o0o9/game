@@ -80,7 +80,7 @@
     <main>
         <form method="post">
             <div class="container">
-                <input type="text" name="name" id="name" placeholder="Imie szopa..." required>
+                <input type="text" name="name" id="name" placeholder="Character name..." required>
             </div>
             <div class="container">
                 <div class="container_name">
@@ -153,13 +153,13 @@
             </p>
             <div id="value"></div>
             <p>
-                <input type="submit" value="Stwórz Szopa" id="submitButton">
+                <input type="submit" value="Create a character" id="submitButton">
             </p>
             <div id="function"><?=racoon();?></div>
         </form>
     </main>
     <a href="./racoon.php" id="back">
-        <input type="button" value="Wróć">
+        <input type="button" value="Back">
     </a>
 <script src="../js/racoonStats.js"></script>
 </body>

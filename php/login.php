@@ -22,10 +22,10 @@
                 $_SESSION["login"] = $login;
                 $_SESSION["id"] = $row['id'];
 
-                return htmlspecialchars("Zalogowano pomyślnie." . header("refresh:1.5; url=lobby.php"));
+                return htmlspecialchars("You have logged in successfully." . header("refresh:1.5; url=lobby.php"));
                 exit();
             } else {
-                return "Nieprawidłowy login lub hasło.";
+                return "Incorrect login or password.";
                 exit();
             }
         }
@@ -47,25 +47,25 @@
 </head>
 <body>
     <main>
-        <h1>Logowanie</h1>
-        <a href="../php/register.php" id="back">
-            <input type="button" value="Rejestracja">
+        <h1>Login</h1>
+        <a href="../php/register.php" id="register">
+            <input type="button" value="Registration">
         </a>
         <a href="../php/reset_password.php" id="reset">
-            <input type="button" value="Zmiana hasła">
+            <input type="button" value="Password change">
         </a>
         <form method="post">
             <p>
                 <label for="login" class="material-symbols-outlined">person</label>
-                <input type="text" name="login" id="login" placeholder="Podaj Login..." required>
+                <input type="text" name="login" id="login" placeholder="Enter Login..." required>
             </p>
             <p>
                 <label for="password" class="material-symbols-outlined labelPass">password</label>
-                <input type="password" name="password" id="password" class="pass" placeholder="Podaj Hasło..." required>
+                <input type="password" name="password" id="password" class="pass" placeholder="Enter the password..." required>
                 <span class="material-symbols-outlined visPass">visibility_off</span>
             </p>
             <p>
-                <input type="submit" value="Zaloguj się">
+                <input type="submit" value="Log in">
             </p>
             <p id="value"><?=login();?></p>
         </form>

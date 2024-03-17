@@ -20,7 +20,7 @@
 </head>
 <body>
     <main>
-        <h1>Wybierz Postać</h1>
+        <h1>Select Character</h1>
         <div>
             <a href="../php/racoon_stats.php?class=Archer" class="classRacoon">
                 <strong>Archer</strong>
@@ -62,40 +62,40 @@
     </main>
     <div id="info">
             <div class="classInfo">
-                <strong>Opis:</strong> <br>
-                Szopy Łucznicy są mistrzami w posługiwaniu się łukami i strzałami z dystansu. 
-                Dzięki ich zwinności i umiejętnościom w tropieniu, stanowią doskonałych strażników i łowców. 
-                Ich zręczność pozwala im unikać ataków wroga, a celność strzałów sprawia, że są niebezpiecznymi przeciwnikami na odległość.
+                <strong>Description:</strong> <br>
+                Raccoons Archers are adept at using bows and arrows from a distance.
+                Their agility and tracking skills make them excellent guards and hunters.
+                Their agility allows them to avoid enemy attacks, and their accurate shots make them dangerous opponents from a distance.
             </div>
             <div class="classInfo">
-                <strong>Opis:</strong> <br>
-                Barbarzyńcy to potężni wojownicy, którzy czerpią siłę ze swego dzikiego gniewu. 
-                Zwykle prowadzą ich pierwotne instynkty, co sprawia, że są nieustępliwi i pełni determinacji w walce. 
-                Zdolności fizyczne oraz zdolność do ignorowania bólu sprawiają, że są idealnymi frontowymi wojownikami, wchodzącymi do walki bez strachu.
+                <strong>Description:</strong> <br>
+                Barbarians are mighty warriors who draw strength from their fierce anger.
+                They are usually guided by their primal instincts, which makes them tenacious and determined in battle.
+                Their physical abilities and ability to ignore pain make them ideal frontline warriors, entering combat without fear.
             </div>
             <div class="classInfo">
-                <strong>Opis:</strong> <br>
-                Rycerze to odważni wojownicy, którzy kultywują zasady honoru i sprawiedliwości. 
-                Uzbrojeni w ciężkie zbroje i potężne miecze, stanowią solidną osłonę dla swoich sojuszników. 
-                Ich umiejętności obronne oraz zdolność do zadawania potężnych ciosów sprawiają, że są niezastąpionymi obrońcami królestwa.
+                <strong>Description:</strong> <br>
+                Knights are brave warriors who cultivate the principles of honor and justice.
+                Armed with heavy armor and powerful swords, they provide solid cover for their allies.
+                Their defensive skills and ability to deal powerful blows make them irreplaceable defenders of the kingdom.
             </div>
             <div class="classInfo">
-                <strong>Opis:</strong> <br>
-                Paladyni to wojownicy-klerycy, którzy łączą w sobie potęgę fizyczną z boską magią. 
-                Są oddani sprawiedliwości i dobru, używając swoich umiejętności zarówno w walce fizycznej, jak i duchowej. 
-                Paladyni potrafią leczyć rany, chronić sojuszników oraz zadawać ciosy ze świetlistą mocą.
+                <strong>Description:</strong> <br>
+                Paladins are cleric warriors who combine physical power with divine magic.
+                They are dedicated to justice and goodness, using their skills in both physical and spiritual warfare.
+                Paladins can heal wounds, protect allies, and strike with luminous power.
             </div>
             <div class="classInfo">
-                <strong>Opis:</strong> <br>
-                Złodzieje to mistrzowie skradania się, podstępu i precyzyjnych ataków z ukrycia. Posiadają umiejętności maskowania, dzięki którym są trudni do zauważenia. 
-                Są świetnymi szpiegami i specjalistami od przemytu informacji. 
-                Zdolności złodzieja obejmują również wyważanie zamków, rozbrajanie pułapek i unikanie konfrontacji tam, gdzie inny wojownik musiałby użyć siły.
+                <strong>Description:</strong> <br>
+                Thieves are masters of stealth, deception and precise hidden attacks. They have camouflage skills that make them difficult to notice.
+                They are great spies and specialists in information smuggling.
+                The thief's abilities also include picking locks, disarming traps and avoiding confrontations where another warrior would have to use force.
             </div>
             <div class="classInfo">
-                <strong>Opis:</strong> <br>
-                Czarodzieje posługują się potężną magią, kontrolującą żywioły i rzeczywistość. 
-                Są źródłem niewyobrażalnej mocy, potrafiącej zarówno niszczyć wrogów, jak i leczyć rany sojuszników. 
-                Zdolności czarodzieja obejmują zaklęcia ognia, lodu, błyskawic, a także umiejętność manipulowania czasem i przestrzenią.
+                <strong>Description:</strong> <br>
+                Wizards use powerful magic that controls the elements and reality.
+                They are a source of unimaginable power, able to both destroy enemies and heal the wounds of allies.
+                The wizard's abilities include fire, ice and lightning spells, as well as the ability to manipulate time and space.
             </div>
         </div>
 <script src="../js/classInfo.js"></script>

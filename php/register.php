@@ -25,16 +25,16 @@
             $result_email = $conn -> query($sql_email);
 
             if ($result_login -> num_rows > 0) {
-                return "Taki login już istnieje.";
+                return "Such a login already exists.";
                 exit();
             } elseif (!$email) {
-                return "Niepoprawny adres e-mail.";
+                return "Incorrect email address.";
                 exit();
             } elseif ($result_email -> num_rows > 0) {
-                return "Taki e-mail już istnieje.";
+                return "Such an email already exists.";
                 exit();
             } elseif ($pass1 !== $pass2) {
-                return "Podane hasła różnią się.";
+                return "The passwords provided differ.";
                 exit();
             } else {
                 $hashedPassword = password_hash($pass1, PASSWORD_DEFAULT);
@@ -42,14 +42,14 @@
                             VALUES ('$login', '$email', '$hashedPassword')";
 
                 if (!$conn -> query($query)) {
-                    return "Wystąpił błąd. Spróbuj ponownie później.";
+                    return "An error occured. Please try again later.";
                     exit();
                 } else {
                     $id = $conn -> insert_id;
                     $_SESSION["logged"] = true;
                     $_SESSION["login"] = $login;
                     $_SESSION["id"] = $id;
-                    return htmlspecialchars("Utworzono konto." . header('refresh: 1.5; url=racoon.php'));
+                    return htmlspecialchars("Account created." . header('refresh: 1.5; url=racoon.php'));
                     exit();
                 }
             }
@@ -72,31 +72,31 @@
 </head>
 <body>
     <main>
-        <h1>Rejestracja</h1>
+        <h1>Registration</h1>
         <a href="../php/login.php" id="back">
-            <input type="button" value="Zaloguj się">
+            <input type="button" value="Log in">
         </a>
         <form method="post">
             <p>
                 <label for="login" class="material-symbols-outlined">person</label>
-                <input type="text" name="login" id="login" placeholder="Podaj Login..." required>
+                <input type="text" name="login" id="login" placeholder="Enter Login..." required>
             </p>
             <p>
                 <label for="email" class="material-symbols-outlined">email</label>
-                <input type="text" name="email" id="email" placeholder="Podaj Email..." required>
+                <input type="text" name="email" id="email" placeholder="Enter Email..." required>
             </p>
             <p>
                 <label for="password1" class="material-symbols-outlined labelPass">password</label>
-                <input type="password" name="password1" id="password1" class="pass" placeholder="Podaj Hasło..." minlength="8" required>
+                <input type="password" name="password1" id="password1" class="pass" placeholder="Enter the password..." minlength="8" required>
                 <span class="material-symbols-outlined visPass">visibility_off</span>
             </p>
             <p>
                 <label for="password2" class="material-symbols-outlined labelPass">password</label>
-                <input type="password" name="password2" id="password2" class="pass" placeholder="Powtórz Hasło..." minlength="8" required>
+                <input type="password" name="password2" id="password2" class="pass" placeholder="Repeat password..." minlength="8" required>
                 <span class="material-symbols-outlined visPass">visibility_off</span>
             </p>
             <p>
-                <input type="submit" value="Zarejestruj się">
+                <input type="submit" value="Register">
             </p>
             <p id="value"><?=register()?></p>
         </form>

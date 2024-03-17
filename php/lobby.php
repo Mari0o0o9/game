@@ -82,8 +82,8 @@
 <body>
     <div>
         <div id="name_user">
-            <h1>Witaj <?=$_SESSION["login"]?>!!!</h1>
-            <div>Wybierz swoją postać</div>
+            <h1>Hello <?=$_SESSION["login"]?>!!!</h1>
+            <div>Choose your character</div>
         </div>
         <main>
             <?=racoon();?>

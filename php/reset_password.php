@@ -19,13 +19,13 @@
             $result_email = $conn -> query($sql_email);
 
             if (!$email) {
-                return "Niepoprawny adres e-mail.";
+                return "Incorrect email address.";
                 exit();
             } elseif ($result_email -> num_rows == 0) {
-                return "Nie ma takiego e-mailu.";
+                return "There is no such email.";
                 exit();
             } elseif ($password1 !== $password2) {
-                return "Hasła nie są takie same.";
+                return "The passwords are not the same.";
                 exit();
             } else {
                 $pass_hash = password_hash($password1, PASSWORD_DEFAULT);
@@ -34,10 +34,10 @@
                                 SET password = '$pass_hash' 
                                 WHERE email = '$email'";
                 if ($conn -> query($sql_update)) {
-                    return "Zmieniono Hasło pomyślnie." . header("refresh:1.5; url=login.php");
+                    return "Password changed successfully." . header("refresh:1.5; url=login.php");
                     exit();
                 } else {
-                    return "Wystąpił błąd podczas zmiany hasła.";
+                    return "An error occurred while changing your password.";
                     exit();
                 }
             }
@@ -60,27 +60,27 @@
 </head>
 <body>
     <main>
-        <h1>Zmiana Hasła</h1>
+        <h1>Password change</h1>
         <a href="../php/login.php" id="back">
-            <input type="button" value="Wróć">
+            <input type="button" value="Back">
         </a>
         <form method="post">
             <p>
                 <label for="email" class="material-symbols-outlined">person</label>
-                <input type="text" name="email" id="email" placeholder="Podaj Email..." required>
+                <input type="text" name="email" id="email" placeholder="Enter Email..." required>
             </p>
             <p>
                 <label for="password1" class="material-symbols-outlined labelPass">password</label>
-                <input type="password" name="password1" id="password1" class="pass" placeholder="Podaj Hasło..." required>
+                <input type="password" name="password1" id="password1" class="pass" placeholder="Enter the password..." required>
                 <span class="material-symbols-outlined visPass">visibility_off</span>
             </p>
             <p>
                 <label for="password2" class="material-symbols-outlined labelPass">password</label>
-                <input type="password" name="password2" id="password2" class="pass" placeholder="Powtórz Hasło..." required>
+                <input type="password" name="password2" id="password2" class="pass" placeholder="Repeat password..." required>
                 <span class="material-symbols-outlined visPass">visibility_off</span>
             </p>
             <p>
-                <input type="submit" value="Zmień Hasło">
+                <input type="submit" value="Change Password">
             </p>
             <p id="value"><?=reset_pass();?></p>
         </form>

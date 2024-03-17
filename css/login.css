@@ -96,7 +96,7 @@ input[type="submit"]:hover {
 #back input {
     border: solid 2px black;
     border-radius: 20px;
-    width: 6vw;
+    width: 4vw;
     background-color: white;
     cursor: pointer;
     transition: 0.4s;
@@ -110,15 +110,37 @@ input[type="submit"]:hover {
     scale: 1.2;
 }
 
+#register {
+    position: relative;
+    bottom: 7.5vh;
+    left: 1vw;
+}
+#register input {
+    border: solid 2px black;
+    border-radius: 20px;
+    width: 6vw;
+    background-color: white;
+    cursor: pointer;
+    transition: 0.4s;
+
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+#register input:hover {
+    scale: 1.2;
+}
+
 #reset {
     position: relative;
     bottom: 7.5vh;
-    left: 16.5vw;
+    left: 15vw;
 }
 #reset input {
     border: solid 2px black;
     border-radius: 20px;
-    width: 6vw;
+    width: 7.5vw;
     background-color: white;
     cursor: pointer;
     transition: 0.4s;
