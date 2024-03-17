@@ -1,4 +1,5 @@
 <?php
+    ob_start();
     session_start();
 
     if (!isset($_SESSION["logged"]) || !isset($_SESSION["login"]) || !isset($_SESSION["id"])) {
@@ -22,3 +23,7 @@
     
 </body>
 </html>
+<?php
+    $conn -> close();
+    ob_end_flush();
+?>
